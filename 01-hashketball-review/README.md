@@ -1,17 +1,6 @@
-First talk about process
-
-- This is going to be very hard. It is going to be much more difficult for some of you than for others. Please try and recognize that in one another and help each other as much as you possibly can.
 - Work together. Help one another as much as possible. Learn through teaching
-- Talk about my Flatiron experience.
-
-  - Coming early / staying late
-  - Weekends
-  - "study groups"
-  - Drilling labs over and over and over again
-  - The solution branch on labs
-
-- Lectures are recorded - Here is where you can find lecture code
-- Here is how to clone down the repo
+- There is a solution branch on all labs. Once you are completely stuck, have asked your classmates for help, have googled tirelessly, don't hesitate to look at the solution to familiarize yourself with one of the ways to solve the problem.
+- Lectures are recorded
 - Lecture priorities:
 
   - Interactivity is key
@@ -26,21 +15,19 @@ First talk about process
   - Puts
 
 - Things that helped me:
+
   - Timestamp methods
   - Quiver
-  - VSCode cool things
   - Spectacle
-  - CMD +
 
-Second talk about actual hashketball
-
-- Talk about hashketball a little bit.
-  - Ask students to identify data types
 - Different data types
+
   - how to check data types
   - calling '.methods' on anything in ruby
   - Data types matter. I.E. adding a number to an array
+
 - IRB walkaround
+
   - make an array and play with it
   - block return value vs. the methods return value
     - each vs. map
@@ -50,7 +37,7 @@ Second talk about actual hashketball
     people = [{name: "Matt", age: 36},{name: "Alice", age: 25},{name: "Dave", age: 6},{name: "Nancy", age: 36}]
     ```
     - demonstrate select vs. find (first match vs. all matches)
-- Walk through the lab and solve each of the tests systematically
+
 - Test driven development
 
   - check out spec file

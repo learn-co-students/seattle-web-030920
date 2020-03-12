@@ -10,8 +10,8 @@ Deliverables
 [X] User.post_tweet takes a message and creates a new tweet 
 
 Post and Comments
-[] Post have title 
+[x] Post have title 
 [] Post.comments displays all of my posts comments
-[] Post.make_comment to create a comment 
+[x] Post.make_comment to create a comment 
 [] Comments display the post title 
 

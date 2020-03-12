@@ -15,6 +15,7 @@ class Post
     end 
 
     def make_comment(content) 
+        binding.pry
         Comment.new(content,self)
     end 
 

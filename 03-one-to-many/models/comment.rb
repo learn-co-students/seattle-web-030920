@@ -2,6 +2,7 @@ class Comment
     @@all = []
 
     def initialize(content, post)
+        binding.pry
         @content = content
         @post = post
         @@all << self

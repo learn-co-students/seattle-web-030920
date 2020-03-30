@@ -2,11 +2,11 @@
 
 | CRUD Letter | RESTful Route          | Controller Action |
 |-------------|------------------------|-------------------|
-| C(reate)    | POST   /books          | create            |
-| R(ead)      | GET    /books          | index             |
-| R(ead)      | GET    /books/:id      | show              |
-| U(pdate)    | PATCH  /books/:id      | update            |
-| D(elete)    | DELETE /books/:id      | destroy           |
+| C(reate)    |       |             |
+| R(ead)      |       |             |
+| R(ead)      |       |             |
+| U(pdate)    |       |             |
+| D(elete)    |       |             |
 
 ## Students Will Be Able to:
  
@@ -17,7 +17,29 @@
 
 ## Deliverables
 
+ - [ ] As a user, I should be able to see a list of books.
+    1. What new model(s) do I need?
+        - New class?
+            `book.rb`
+        - New migration? (i.e. does the schema need to change?)
+            `create_books`
+        - Associations?
+            ` no accociations`
+        - Seeds?
+            `adapter`
+    2. What route(s) do I need?
+        `all_the_books`
+    4. What view(s) do I need?
+
+    `all_the_books`
+    (R)ead
+    GET
+    [ See the list of books ( title, author ) ]
+    [ maybe see snippet after a link is clicked. ]
  - [ ] As a user, I should be able to view the information about a particular book by providing its ID
+    1. Model -> we don't need becuase we already have a book
+    2. routes -> `/books/1`
+    3. 
  - [ ] As a user, I should be able to create a new book by providing form data (using Postman)
  - [ ] As a user, I should be able to update an existing book by providing its ID as well as form data (using Postman)
  - [ ] As a user, I should be able to delete an existing book by providing its ID (using Postman)
@@ -45,3 +67,8 @@ To run this application, use the following bash commands:
 4. `shotgun`
 
 Then using a web client, navigate to the host printed out in the terminal, e.g. `http://127.0.0.1:9393/` or `http://127.0.0.1:9393/books`
+
+## Questions:
+- ::Book
+- Modules and how they are being used.
+- 

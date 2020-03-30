@@ -18,6 +18,7 @@ module Adapter
         book.snippet = item['volumeInfo']['description']
 
         book.save
+        #Book.create(author: author , title: ....)
       end
     end
 

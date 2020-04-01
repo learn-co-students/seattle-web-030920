@@ -1,0 +1,7 @@
+<% @books.map do |book| %>
+  <a href=<%="http://localhost:9393/books/#{book.id}"%>> <h1> <%= "#{book.title}" %> </h1> </a>
+  <form action=<%="/books/#{book.id}"%> method="post">
+    <input type="hidden" name="_method" value="delete">
+    <input type="submit" value="DELETE BOOK"> 
+  </form>
+<% end %>

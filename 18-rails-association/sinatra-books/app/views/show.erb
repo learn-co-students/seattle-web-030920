@@ -1,0 +1,7 @@
+<h1> <%= @book.title %> </h1>
+<h3> <%= @book.author %> </h3>
+<h5> <%= @book.snippet %> </h5>
+<form action="/books/:id" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <input type="submit" value="DELETE BOOK"> 
+</form>

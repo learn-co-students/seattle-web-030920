@@ -83,7 +83,15 @@ Then using a web client, navigate to the host printed out in the terminal, e.g. 
     - html label tag.
 
 
-[ ] **As a site visitor, I should be able to see a list of authors(For the purpose of this project, an author has many books and a book belongs to one author.)**
+- [ ] **As a site visitor, I should be able to see a list of authors(For the purpose of this project, an author has many books and a book belongs to one author.)**
+    - Model : 
+        - `author.rb`
+        - `create_authors`, `remove/add column author_id`
+        - `Association : has_many and belongs_to
+        - seeds -> taken care of
+    - routes -> get '/books' index
+    - controller : index
+    - view : index
 - [ ] **As a site visitor, I should be able to view a single author.  I should be able to see the author's name and count of books.**
 - [ ] **As a site visitor, I should be able to create a new book and associate it with an existing author.**
 
@@ -94,4 +102,3 @@ Then using a web client, navigate to the host printed out in the terminal, e.g. 
     - getting scope of the lab
     - how to approach it
 - validations lab
-

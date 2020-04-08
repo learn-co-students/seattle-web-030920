@@ -3,6 +3,7 @@
   <%= f.text_field :title %>
   <%= f.label :author %>
   <%= f.text_field :author %>
+  <%= f.collection_select(:author_id, Author.all, :id, :name, prompt: true) %>
   <%= f.label :snippet %>
   <%= f.text_area :snippet %>
   <%= f.submit %>

@@ -1,0 +1,13 @@
+<% if flash[:error_message_for_user] %> 
+  <% flash[:error_message_for_user].each do |message|  %>
+    <h2 style="color: red"><%= message %></h2>
+  <% end %>
+<% end %>
+<%= form_for @tea do |f| %>
+  <%= f.label :name %>
+  <%= f.text_area :name %>
+  <%= f.label :price %>
+  <%= f.number_field :price, step: 0.01 %>
+  <%= f.collection_select :store_id, @stores, :id, :name %>
+  <%= f.submit "Add Tea" %>
+<% end %>

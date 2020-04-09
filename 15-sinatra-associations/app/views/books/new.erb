@@ -1,0 +1,12 @@
+<form action="/books" method="post">
+  <label name="title">Title</label>
+  <input type="text" name="book[title]" value="please enter a title"> 
+  <!--input type="text" name="book[author]" value="please enter a author"-->
+  <select name="book[author_id]">
+    <% @authors.map do |author| %>
+    <option name="book[author_id]" value=<%="#{author.name}"%>><%= author.name %></option>
+    <% end %>
+  </select> 
+  <input type="text" name="book[snippet]" value="please enter a snippet"> 
+  <input type="submit"> Create Book </input>
+</form>

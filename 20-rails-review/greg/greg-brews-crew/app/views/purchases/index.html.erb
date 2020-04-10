@@ -1,0 +1,5 @@
+<h1>All Purchases</h1>
+
+<% @purchases.each do |purchase| %>
+    <%= purchase.customer_name%> $<%= purchase.price%> <%= link_to "link", purchase_path(purchase) %><br>
+<% end %>

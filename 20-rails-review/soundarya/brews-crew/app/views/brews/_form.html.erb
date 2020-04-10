@@ -1,0 +1,12 @@
+<%= flash[:message] %>
+<%= form_for(@brew) do |f| %>
+  <%= f.label :blend_name %>
+  <%= f.text_field :blend_name %> <br/>
+  <%= f.label :origin %>
+  <%= f.text_field :origin %> <br/>
+  <%= f.label :notes %>
+  <%= f.text_field :notes %> <br/>
+  <%= f.label :strength %>
+  <%= f.number_field :strength, step: 0.01 %> <br/>
+  <%= f.submit %>
+<% end %>

@@ -1,0 +1,10 @@
+<h1><%= @brew.blend_name %></h1>
+Origin: <%= @brew.origin %>  <br/>
+Notes: <%= @brew.notes %> <br/>
+Strength: <%= @brew.strength %>
+Strongest_brews: <%= link_to "Strongest Brews!!", strongest_brew_path %>
+<ul>
+<% @brew.purchases.each do |purchase| %>
+  <li><%= link_to "#{purchase.customer_name} has enjoyed #{@brew.blend_name}", purchase %> </li>
+<% end %>
+</ul>

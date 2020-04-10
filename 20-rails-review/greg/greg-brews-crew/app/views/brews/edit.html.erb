@@ -1,0 +1,13 @@
+<h1>Edit an existing brew</h1>
+
+<%= form_for @brew do |f| %>
+    <%= f.label :blend_name %>
+    <%= f.text_field :blend_name %><br>
+    <%= f.label :origin %>
+    <%= f.text_field :origin %><br>
+    <%= f.label :notes %>
+    <%= f.text_area :notes %><br>
+    <%= f.label :strength %>
+    <%= f.number_field :strength %><br>
+    <%= f.submit "Update Brew"%><br>
+<% end %>

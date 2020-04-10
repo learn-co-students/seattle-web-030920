@@ -1,0 +1,13 @@
+<h1>Create a Purchase</h1>
+
+<%= form_for @purchase do |f| %>
+    <%= f.label :customer_name %>
+    <%= f.text_field :customer_name %><br>
+    <%= f.label :price %>
+    <%= f.number_field :price, step: 0.01 %><br>
+    <%= f.label :brew %>
+    <%= f.collection_select :brew_id, Brew.all, :id, :blend_name %><br>
+
+    <%# the new page should allow you to choose the brew that was purchased %>
+    <%= f.submit %>
+<% end %>

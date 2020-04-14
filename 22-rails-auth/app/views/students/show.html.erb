@@ -1,0 +1,15 @@
+<div class='ui raised segment'>
+  <div class='ui fluid card'>
+    <div class='huge content'>
+      <div class='header'><h1><%= @student.name %></h1></div>
+      <div class="meta">
+         <span class="date">
+           <h3><%= @student.cohort.name %> (<%= @student.cohort.start_date.strftime('%m%d%y') %>)</h3>
+         </span>
+      </div>
+      <div class="description">
+        <h3><%= @student.email %></h3>
+      </div>
+    </div>
+  </div>
+</div>

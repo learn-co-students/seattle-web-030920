@@ -1,0 +1,6 @@
+<%= form_for @teacher do |f| %>
+  Name: <%= f.text_field :name %>
+  <%= f.password_field :password %>
+  <%= f.password_field :password_confirmation %>
+  <%= f.submit "Sign up" %>
+<% end %>

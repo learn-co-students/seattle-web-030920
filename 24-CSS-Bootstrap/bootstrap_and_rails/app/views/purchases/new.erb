@@ -1,0 +1,17 @@
+<%= form_for @purchase, :html => {:class=>"form-horizontal center"}  do |f| %>
+    <div class="form-group">
+        <%= f.label :customer_name, class: "col-md-4 control-label" %>
+        <%= f.text_field :customer_name, class:"form-control" %>
+    </div>
+
+    <div class="form-group">
+    <%= f.label :price, class: "col-md-4 control-label" %>
+    <%= f.number_field :price, class:"form-control"%>
+    </div>
+
+    <div class="form-group">
+    <%= f.collection_select :brew_id, @brews, :id, :blend_name, {}, {:class=>"form-control"}%>
+    </div>
+
+    <%= f.submit %>
+<%end%>

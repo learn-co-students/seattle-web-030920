@@ -1,0 +1,11 @@
+<h1>Purchase</h1>
+<div class="container">
+    <% @purchases.each do |purchase|  %>
+        <div class="row">
+            <div class="col"> <%= purchase.customer_name %> </div>
+            <div class="col"> <%= purchase.price %></div>
+             <div class="col"> <%= link_to purchase.brew.blend_name, purchase.brew %> </div>
+            <br>
+        </div>
+    <%end%>
+</div>

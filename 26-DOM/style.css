@@ -1,0 +1,10 @@
+.main_container{
+    display: flex;
+}
+
+aside{
+ margin-right: 10%;
+}
+main{
+    margin-left: 10%
+}

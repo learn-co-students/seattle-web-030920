@@ -1,0 +1,28 @@
+{
+  "cats": [
+    {
+      "id": 1,
+      "name": "Party Cat",
+      "imgUrl": "https://i.kym-cdn.com/entries/icons/facebook/000/005/517/party-cat-party-time.jpg",
+      "catchphrase": "Party on Party Cat"
+    },
+    {
+      "id": 2,
+      "name": "Mittens",
+      "imgUrl": "https://i.pinimg.com/originals/89/9e/71/899e7132fd5125067051104e5e3e3073.jpg",
+      "catchphrase": "Party cat likes to party"
+    },
+    {
+      "id": 3,
+      "name": "Tod",
+      "imgUrl": "asdf",
+      "catchphrase": "adsf"
+    },
+    {
+      "name": "Tod",
+      "catchphrase": "adsf",
+      "imgUrl": "asdf",
+      "id": 4
+    }
+  ]
+}

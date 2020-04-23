@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Cat Party</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="index.js"></script>
+  </head>
+  <body> 
+
+   <h1 onclick="test" id="cat_h1">Party Cat Likes to Party</h1>
+    <div class="main_container">
+      <aside class="container">
+          <h1>Cat Guest List</h1>
+          <ul id="cat_list">
+   
+          </ul>
+          <div>
+          <button id="add_cat_btn">
+              Add Cat
+            </button>
+          </div>
+      </aside>
+
+      <main class="container">
+      
+       <div id="cat_container">
+         
+       </div>
+
+          <div class="closed" id="modal">
+            <div class="modal container">
+              <span id="x_modal">X</span>
+              <form id="new-cat-form">
+                <h1 id="cat_form_header">Edit or Add?</h1>
+                <label for="name">Name</label>
+                <input type="text" name="name">
+                <label for="catchphrase">catchphrase</label>
+                <input type="text" name="catchphrase">
+                <label for="imgUrl">Image URL</label>
+                <input type="text" name="imgUrl">
+                <input type="submit"  class="btn" name="add" value="Add">
+              </form>
+            </div>
+          </div>
+
+      </main>
+  </div> 
+  </body>
+</html> 

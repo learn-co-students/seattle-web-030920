@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Favorite Books</title>
+    <link href="style.css" rel="stylesheet" />
+    <script defer src="index.js"></script>
+  </head>
+  <body>
+    <h1>Book List</h1>
+   
+    <form id="new-book-form" action="">
+      <h3>NEW BOOK</h3>
+      Book Title:<br />
+      <input type="text" name="book-title" value="" />
+      <br />
+      Author:<br />
+      <input type="text" name="author" value="" />
+      <br /><br />
+      Book Cover URL:<br />
+      <input type="text" name="cover" value="" />
+      <br />
+      <input type="submit" value="Submit" />
+    </form>
+
+    <form id="edit-form" action="">
+      <h3>EDIT BOOK</h3>
+      Book Title:<br />
+      <input type="text" name="book-title" value="" />
+      <br />
+      Author:<br />
+      <input type="text" name="author" value="" />
+      <br /><br />
+      Book Cover URL:<br />
+      <input type="text" name="cover" value="" />
+      <input name="book-id" type="hidden" />
+      <br />
+      <input type="submit" value="Submit" />
+    </form>
+
+    <div id="book_list">
+
+    </div>
+  
+  </body>

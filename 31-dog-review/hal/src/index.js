@@ -9,20 +9,36 @@
 const dogBar = document.getElementById('dog-bar')
 const dogInfo = document.getElementById('dog-info')
 const filterBar = document.getElementById("good-dog-filter")
+let allDogs = []
 
-filterBar.addEventListener('click', stuff)
+filterBar.addEventListener('click', filterEm)
 
 
-function stuff(){
+function filterEm(){
+    // fetch
+    let on = filterBar.innerText.includes("ON")
+    dogBar.innerText = ''
     filterBar.innerText = filterBar.innerText.includes("OFF") ? 'Filter good dogs: ON' : 'Filter good dogs: OFF'
-    
+    on? getAllDogs(on) : getAllDogs()
 }
 
-function getAllDogs(){
+function getAllDogs(filter=false){
     fetch('http://localhost:3000/pups')
     .then(response=>response.json())
     .then(json=>{
-        json.forEach(dog=>createDogSpan(dog))
+        allDogs = json
+        return json
+    })
+    .then(json=>{
+        dogBar.innerText = ''
+        if(filter){
+            json.forEach(dog=>{
+                if(dog.isGoodDog){
+                    createDogSpan(dog)
+                }
+            })
+        }
+        else{json.forEach(dog=>createDogSpan(dog))} 
     })
 }
 

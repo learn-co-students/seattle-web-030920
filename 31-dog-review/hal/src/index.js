@@ -15,9 +15,7 @@ filterBar.addEventListener('click', filterEm)
 
 
 function filterEm(){
-    // fetch
     let on = filterBar.innerText.includes("ON")
-    dogBar.innerText = ''
     filterBar.innerText = filterBar.innerText.includes("OFF") ? 'Filter good dogs: ON' : 'Filter good dogs: OFF'
     on? getAllDogs(on) : getAllDogs()
 }

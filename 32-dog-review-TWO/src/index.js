@@ -33,6 +33,8 @@
 
 const DOGSURL = "http://localhost:3000/dogs"
 const main = document.querySelector('main')
+const dogForm = document.getElementById('new-dog')
+dogForm.addEventListener('submit', newDog)
 
 function fetchDogs(){
     fetch(DOGSURL)
@@ -48,23 +50,30 @@ function buildDogCard(dog){
     // if(newDiv){
 
     // }
-
+    // debugger;
+    console.log(dog)
     let newDiv = document.createElement('div')
     newDiv.id = dog.id
     newDiv.innerHTML = 
     `<h2>${dog.name}</h2>
     <p>${dog.breed}</p>
-    <img src='${dog.image}'></img>
-    <p>Likes: ${dog.likes}</p>
+    <img src='${dog.image}' id='dog-pic'></img>
+    <p id='dog-likes' style='cursor: pointer'>Likes: ${dog.likes}</p>
     <p>Comments:</p>`
     let ul = document.createElement('ul')
     newDiv.appendChild(ul)
+    let p = newDiv.querySelector('#dog-likes')
+    p.addEventListener('click', ()=>handleLikes(dog, p, 1))
 
-    dog.comments.forEach(comment=>{
-        let li = document.createElement('li')
-        li.innerText = comment
-        ul.appendChild(li)
-    })
+    let pic = newDiv.querySelector('#dog-pic')
+    pic.addEventListener('click', ()=>handleLikes(dog, p, 10))
+    if(dog.comments){
+        dog.comments.forEach(comment=>{
+            let li = document.createElement('li')
+            li.innerText = comment
+            ul.appendChild(li)
+        })
+    }
 
     let form = document.createElement('form')
     form.innerHTML = 
@@ -92,8 +101,14 @@ function handleSubmit(dog){
     patchDog(dog)
 }
 
+function handleLikes(dog, p, amount){
+    dog.likes += amount
+    p.innerText = `Likes: ${dog.likes}`
+    patchDog(dog)
+}
+
 function patchDog(dog){
-    return fetch(`${DOGSURL}/${dog.id}`, {
+    fetch(`${DOGSURL}/${dog.id}`, {
         method: 'PATCH',
         headers: {
             'Content-Type': 'application/json',
@@ -101,19 +116,34 @@ function patchDog(dog){
         },
         body: JSON.stringify(dog)
     })
-    .then(res=> res.json())
-    .then(dog=>{
-        updateDomComments(dog)
-        // no
+    // .then(res=> res.json())
+    // .then(dog=>{
+    //     updateDomComments(dog)
+    //     // no
+    // })
+    // .catch((error) => {
+    //     console.error('Error:', error);
+    // })
+}
+
+function newDog(){
+    event.preventDefault()
+    let data = {name:event.target.name.value, image:event.target.image.value, breed:event.target.breed.value, likes: 1000000, comments: []}
+    fetch(DOGSURL, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            Accepts: 'application/json'
+        },
+        body: JSON.stringify(data)
     })
-    .catch((error) => {
-        console.error('Error:', error);
-      })
+    .then(res=>res.json())
+    .then(json=> buildDogCard(json))
 }
 
 // function updateDomComments(dog){
 //     let dogDiv = document.getElementById(dog.id)
-//     can get all dogs from this
+//     // can get all dogs from this
 //     dogDiv.querySelector(`ul`)
 // }
 

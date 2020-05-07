@@ -1,0 +1,39 @@
+#main {
+    display: grid;
+    grid-template-areas: 
+            "a a a"
+            "b b b"
+            "c c c";
+    /* grid-template-columns: repeat(10 10%); */
+}
+
+#one{
+    background-color: rgb(112, 254, 254);
+}
+
+#two{
+    background-color: rgb(175, 237, 157);
+}
+
+#three{
+    background-color: rgb(248, 118, 255);
+}
+
+#four{
+    background-color: rgb(158, 91, 252);
+}
+
+#five{
+    background-color: rgb(247, 138, 138);
+    display: flex;
+    justify-content: flex-end;
+}
+
+#six{
+    background-color: rgb(254, 236, 103);
+}
+
+#seven {
+    grid-area: 8;
+}
+

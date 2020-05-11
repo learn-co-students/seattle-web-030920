@@ -1,0 +1,24 @@
+body {
+    background-color: rgb(33, 24, 46);
+    color: #82cd6f;
+    text-shadow: 0px 0px 23px rgb(254, 255, 240)
+}
+
+img#cool-cat {
+    height:200px;
+    box-shadow: #b3b68a 0px 0px 12px;
+    /* border-top: 10px solid;
+    opacity: 0.2;
+    border-image: linear-gradient(to right, rgb(243, 221, 221) 1%, rgb(221, 221, 248) 24%, rgb(207, 207, 240) 80%, rgb(243, 212, 243)) 1 */
+}
+
+.celebrate {
+    width: 175px;
+}
+
+#welcome {
+    font-family: 'Luminari', fantasy;
+    text-align: center;
+    margin-top: 40px;
+}
+

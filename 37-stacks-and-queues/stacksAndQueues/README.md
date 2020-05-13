@@ -30,6 +30,7 @@ Any guesses on what this one is, or how it behaves?
 How could we change the snack dispensing idea to instead use a queue?
     => Load it from the back :thumbsup:
 
+## Code Along
 Objectives:
 - Code out a way to add items to the stack
 - Code out a way to remove items

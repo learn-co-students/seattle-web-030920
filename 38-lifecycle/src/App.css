@@ -1,0 +1,36 @@
+body {
+  background-color: #bdbcb0;
+  text-shadow: 0px 0px 23px rgb(254, 255, 240);
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.method-name {
+  color: white;
+  font-family: Arial, Helvetica, sans-serif
+}
+
+.container {
+  min-height: 100px;
+}
+
+.app {
+    background-color: rgb(39, 4, 4);
+  color: #cc9f9f;
+}
+
+.first-child {
+  color: rgb(60, 63, 22);
+  background-color: #39642c;
+}
+
+.positive {
+  color: rgb(22, 61, 22);
+  background-color: rgb(30, 83, 43);
+}
+
+.negative {
+  color: rgb(61, 22, 30);
+  background-color: rgb(83, 30, 39);
+}
